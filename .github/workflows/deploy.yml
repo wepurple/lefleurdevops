@@ -10,9 +10,9 @@ permissions:
 
 jobs:
   deploy:
-runs-on: ubuntu-latest
-steps:
-  - name: Checkout du code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
     uses: actions/checkout@v3
   - name: Déploiement sur GitHub Pages
     uses: peaceiris/actions-gh-pages@v3
