@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: #2ecc71
+}
+
+body > * {
+	width: 70%;
+	margin: auto;
+}
+
+/* HEADER */
+
+header {
+	margin-top: 1em;
+	background-color: #27ae60;
+	text-align: center;
+}
+
+/** TEXT with IMAGE align **/
+header > h1 {
+	display: inline-block;
+	border-bottom: 2px solid rgba(99, 110, 114, 0.3);
+	vertical-align: top;
+	margin-top: 25px;
+}
+
+header > img {
+	width: 50px;
+	height: auto;
+	margin-top: 22px;
+}
+/*********************/
+
+header > h3 {
+	padding: .15em;
+}
+
+/** NAV **/
+nav {
+	background-color: #ffbe76;
+}
+
+nav ul > li {
+	display: inline-block;
+	padding: 1em;
+}
+
+nav ul li > a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+nav ul li > a:hover {
+	color: #d63031;
+	transition-duration: 0.5s;
+}
+
+.products {
+	color: #d63031;
+	font-weight: bold;
+        font-size: 20px;
+	font-style: oblique;
+}
+
+.current {
+	color: black;
+	border-bottom: 2px solid black;
+}
+
+/*********************/
+
+/* MAIN */
+
+main {
+	background-color: #fd79a8;
+}
+
+.content-center {
+	margin: auto;
+        width: 80%;
+	text-align: center;
+}
+
+main > .content-center {
+	padding: 2em;
+	font-weight: bold;
+}
+
+.content-center > img {
+	width: 40%;
+	height: auto;
+}
+
+.content-center-text > p {
+	padding: .5em;
+}
+
+/** TABLE **/
+
+.content-center > table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.content-center td > img {
+	width: 100%;
+	height: auto;
+}
+
+.content-center > table, th, td {
+  border: 1px solid black;
+}
+
+/*********************/
+
+/* FOOTER */
+
+footer {
+	background-color: #27ae60;
+	text-align: center;
+	padding: 1.5em 0;
+	font-weight: bold;
+}
