@@ -14,12 +14,9 @@ jobs:
         with:
           node-version: "18"
       - run: npm install
-        working-directory: ../
       - name: Grant execution permission for htmlhint
         run: chmod +x ./node_modules/.bin/htmlhint
-        working-directory: ../
       - run: npm run lint:html
-        working-directory: ../
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
