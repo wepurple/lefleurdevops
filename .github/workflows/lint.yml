@@ -3,25 +3,21 @@ name: Lint HTML & CSS
 on: [push, pull_request]
 
 jobs:
-    lint:
-        runs-on: ubuntu-latest
-    
-        steps:
-        - name: Checkout du code
-            uses: actions/checkout@v3
-    
-        - name: Configurer Node.js
-            uses: actions/setup-node@v3
-            with:
-            node-version: '18'
-    
-        - name: Installer les dépendances
-            run: npm install
-    
-        - name: Grant execute permission for lint scripts
-            run: chmod +x ./node_modules/.bin/htmlhint 
-        - run: npm run lint:html
-        - name: SonarCloud Scan
-                uses: SonarSource/sonarqube-scan-action@v5.0.0
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+      - name: Configurer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Installer les dépendances
+        run: npm install
+      - name: Grant execute permission for lint scripts
+        run: chmod +x ./node_modules/.bin/htmlhint 
+      - run: npm run lint:html
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
                 env:
                     SONAR_TOKEN: ${{ secrets.SONAR_LAFLEUR_SONAR }}
