@@ -1,19 +1,19 @@
 name: Lint HTML & CSS
 
 on:
-    push:
-    pull_request:
+  push:
+  pull_request:
 
 jobs:
-    lint:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: SonarCloud Scan
-                uses: SonarSource/sonarqube-scan-action@5.0.0
-                env:
-                    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-            - run: npm install
-            - name: Grant execution permission for htmlhint
-                run: chmod +x ./node_modules/.bin/htmlhint
-            - run: npm run lint:html
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@5.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - run: npm install
+      - name: Grant execution permission for htmlhint
+        run: chmod +x ./node_modules/.bin/htmlhint
+      - run: npm run lint:html
