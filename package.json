@@ -1,0 +1,17 @@
+{
+  "name": "lafleur-devops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:html": "htmlhint '**/*.html'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "htmlhint": "^1.8.0"
+  }
+}
